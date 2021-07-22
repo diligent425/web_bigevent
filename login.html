@@ -5,11 +5,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录</title>
+    <title>大事件-登录/注册</title>
+    <!-- 导入 layui 的样式表。就可以使用Layui的组件和样式了 -->
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css" />
+    <link rel="stylesheet" href="./assets/css/login.css" />
+
+    <!-- 导入 Layui 的js文件，使得表单项中输入内容不符合要求时，有layui的提示效果。注意导入的顺序，因为login.js是自己的js，可能会用到layui.js中的属性，所以自己的js在最后的导入 -->
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/lib/jquery.js"></script>
+    <!-- 导入自己封装的 baseAPI.js  -->
+    <script src="./assets/js/baseAPI.js"></script>
+    <script src="./assets/js/login.js"></script>
 </head>
 
 <body>
+    <!-- 顶部“大事件logo”区 -->
+    <div class="layui-main">
+        <img src="./assets/images/logo.png" alt="" />
+    </div>
 
+    <!-- 登录&注册框 -->
+    <div class="loginAndReg">
+        <!-- 头部“后台管理系统”logo图片 -->
+        <div class="title-box">
+            <img src="./assets/images/login_title.png" alt="">
+        </div>
+
+        <!-- 登录框的div -->
+        <div class="login-box">
+            <!-- 表单区：登录盒子、注册盒子 -->
+            <form class="layui-form" id="form_login">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username" style="font-size: 18px;"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" class="layui-input">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password" style="font-size: 18px;"></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码" class="layui-input">
+                </div>
+                <!-- 登录按钮 -->
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit lay-filter="formDemo">登录</button>
+                </div>
+                <!-- “去注册”的跳转链接 -->
+                <div class="layui-form-item links">
+                    <a href="javascript:;" class="reg">去注册</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- 注册框的div，默认情况下是隐藏的 -->
+        <div class="register-box">
+            <!-- 表单区：登录盒子、注册盒子 -->
+            <form class="layui-form" id="form_reg">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username" style="font-size: 18px;"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" class="layui-input">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password" style="font-size: 18px;"></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码" class="layui-input">
+                </div>
+                <!-- 确认密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password" style="font-size: 18px;"></i>
+                    <input type="password" name="repassword" required lay-verify="required|pwd|repwd" placeholder="请再次输入密码" class="layui-input">
+                </div>
+                <!-- 注册按钮 -->
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit lay-filter="formDemo">注册</button>
+                </div>
+                <!-- “去登录”的跳转链接 -->
+                <div class="layui-form-item links">
+                    <a href="javascript:;" class="login">去登录</a>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
 </body>
 
 </html>

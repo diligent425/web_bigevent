@@ -1,55 +1,61 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  background: url('/assets/images/login_bg.jpg') no-repeat center;
-  background-size: cover;
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url(/assets/images/login_bg.jpg) no-repeat center;
+    background-size: cover;
 }
 
-.loginAndRegBox {
-  width: 400px;
-  height: 310px;
-  background-color: #fff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.layui-main {
+    margin-top: 20px;
+}
+
+.loginAndReg {
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .title-box {
-  height: 60px;
-  background: url('/assets/images/login_title.png') no-repeat center;
-}
-
-.reg-box {
-  display: none;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
 }
 
 .layui-form {
-  padding: 0 30px;
+    padding: 0 30px;
 }
 
 .links {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.links a {
-  font-size: 12px;
+.reg,
+.login {
+    font-size: 12px;
+}
+
+.register-box {
+    display: none;
 }
 
 .layui-form-item {
-  position: relative;
+    position: relative;
 }
 
 .layui-icon {
-  position: absolute;
-  left: 10px;
-  top: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .layui-input {
-  padding-left: 32px;
+    padding-left: 32px;
 }
