@@ -15,3 +15,8 @@ body {
 .layui-form {
     width: 500px;
 }
+
+.layui-card .layui-card-header {
+    height: 50px;
+    font-size: 20px;
+}

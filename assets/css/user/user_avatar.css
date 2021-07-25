@@ -9,6 +9,11 @@ body {
     background-color: #f2f3f5;
 }
 
+.layui-card-header {
+    height: 50px;
+    font-size: 20px;
+}
+
 
 /* 设置卡片主体区域的宽度 */
 

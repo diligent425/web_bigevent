@@ -1,19 +1,15 @@
-body,
-html {
+html,
+body {
     margin: 0;
     padding: 0;
 }
 
 body {
+    padding: 30px !important;
     background-color: #f2f3f5;
-    padding: 30px;
-}
-
-.layui-input-block {
-    width: 500px;
 }
 
 .layui-card-header {
-    height: 50px;
     font-size: 20px;
+    height: 50px;
 }
